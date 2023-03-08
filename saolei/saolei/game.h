@@ -3,10 +3,10 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define ROW 9//存放雷的信息+2，相当于9*9的扫雷区
+#define ROW 9//存放雷的信息，相当于9*9的扫雷区
 #define COL 9
 
-#define ROWS ROW + 2//存放雷的信息+2，相当于9*9的扫雷区
+#define ROWS ROW + 2//存放雷的信息+2，相当于9*9的扫雷区和边界
 #define COLS COL + 2
 
 #define count 10

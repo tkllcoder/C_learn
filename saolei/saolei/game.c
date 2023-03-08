@@ -24,13 +24,14 @@ void game()
 	Init_board(mine, ROWS, COLS, '0');
 	Init_board(show, ROWS, COLS, '*');
 
+	printf("*******   扫雷游戏    ********\n");
 	//打印棋盘
 	//Display_board(mine, ROW, COL);
 	Display_board(show, ROW, COL);
 
 	//布置雷到mine数组中
 	Set_mine(mine, ROW, COL, count);
-	Display_board(mine, ROW, COL);
+	//Display_board(mine, ROW, COL);
 
 	//扫雷
 	//输入坐标，
@@ -51,6 +52,8 @@ void game()
 			if (mine[p][q] == '1')
 			{
 				printf("很遗憾，你被炸死了，游戏结束\n");
+				printf("*******   雷的布置: 0不是雷1是雷    ********\n");
+				Display_board(mine, ROW, COL);
 				break;
 			}
 			else
@@ -72,6 +75,8 @@ void game()
 	{
 		printf("恭喜了，通关成功！！\n");
 		Display_board(show, ROW, COL);
+		printf("*******   雷的布置: 0不是雷1是雷    ********\n");
+		Display_board(mine, ROW, COL);
 	}
 
 }
@@ -95,7 +100,6 @@ void Display_board(char board[ROWS][COLS], int row, int col)
 {
 	int i = 0;
 	int j = 0;
-	printf("*******   扫雷游戏    ********\n");
 
 	for (i = 0; i <= col; i++)
 	{
